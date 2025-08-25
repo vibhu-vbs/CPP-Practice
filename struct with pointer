@@ -1,0 +1,23 @@
+/* example to demonstrate how struct object is created and allocated space in heap memory then being called in another function using pointers
+*/
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Person {
+    string name ;
+    int age ;
+} ;
+
+void printStmt(Person *personDetails){
+    std::cout << personDetails -> name <<std::endl;
+};
+int main() {
+    Person *ptr;
+    ptr = new Person;
+    ptr -> name = "vibhu";
+    ptr -> age = 30;
+    printStmt(ptr);
+//std::cout << ptr -> name << std::endl;
+delete ptr;
+return 0;
+}
