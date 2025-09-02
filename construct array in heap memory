@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int *printArr(int size){ // printArr is pointer to integer
+    int *newArr = new int [size]; // newArr is point to an Array of size 5
+    for (int i = 0; i < size; i++){
+        newArr[i] = i + 1;
+    }
+    return newArr; // adddress of new array newArr is returned to ptr
+}
+
+int main() {
+int *ptr, size = 5; // create a pointer to int
+ptr = printArr(size); // call a function
+for(int i = 0; i < size; i++){
+std::cout << ptr[i] << std::endl;    
+}
+
+}
